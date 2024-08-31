@@ -74,7 +74,7 @@ function startEvents() {
     } else if (type == 'room_status_change') {
       for (const room of roomList.value) {
         if (room.roomId === data.roomId) {
-          room.liveStatus = data.liveStatus;
+          room.liveStatus = data.listening ? data.liveStatus ? LiveStatus.LIVE : LiveStatus.NOT_LIVE : LiveStatus.NO_LISTEN,
           room.recording = data.recording;
           break;
         }
