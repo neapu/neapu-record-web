@@ -42,6 +42,7 @@ function onAddRoomConfirmClicked() {
     if (rsp.data.code === 0) {
       console.log('添加成功');
       dataStore.updateRooms();
+      showAddRoomDialog.value = false;
     } else {
       ElNotification({
         title: '添加失败',
