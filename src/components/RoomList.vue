@@ -55,7 +55,7 @@ async function onStartRemoveRoom(roomId: number) {
 }
 
 function onListenStatusChange(_roomId: number, _listening: boolean) {
-  let text = "";
+  let text;
   if (_listening) {
     text = "是否取消监听？";
   } else {
